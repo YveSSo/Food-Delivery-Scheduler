@@ -53,9 +53,15 @@ request_body = { # Modify pickup and drop off addresses below
     "order_value": 1999
 }
 
-create_delivery = requests.post(endpoint, headers=headers, json=request_body) # Create POST request
+#create_delivery = requests.post(endpoint, headers=headers, json=request_body) # Create POST request
 
 
-print("Status Code: " + str(create_delivery.status_code))
-print("Delivery Text: " + create_delivery.text)
-print("Delivery Reason: " + str(create_delivery.reason))
+#print("Status Code: " + str(create_delivery.status_code))
+#print("Delivery Text: " + create_delivery.text)
+#print("Delivery Reason: " + str(create_delivery.reason))
+
+get_delivery = requests.get(endpoint + 'be7888c1-b8aa-4a4d-a431-ef4e7568ffde', headers=headers) # Create GET request
+
+print(get_delivery.status_code)
+print(get_delivery.text)
+print(get_delivery.url)
